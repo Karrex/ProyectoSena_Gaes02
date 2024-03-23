@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Dashboard Del Admin/Crud_Inventario/Pruebas_1.xhtml" x="1263" y="8" zoom="true"/>
+        <Node id="Dashboard Del Cliente/indexCliente.xhtml" x="776" y="181" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Login/Consulta_Usuarios.xhtml" x="843" y="769" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Ventas/indexCRUDCARTA.xhtml" x="345" y="616" zoom="true"/>
+        <Node id="Correos masivos/exito.xhtml" x="1428" y="301" zoom="true"/>
+        <Node id="Correos masivos/error.xhtml" x="1424" y="265" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Pqrs/RespuestaPQR.xhtml" x="1359" y="582" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Ventas/indexVENTAS.xhtml" x="349" y="1007" zoom="true"/>
+        <Node id="Dashboard Del Cliente/Pqrs/ConsultarPqrs.xhtml" x="740" y="123" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Ventas/indexListarImagenes.xhtml" x="1340" y="767" zoom="true"/>
+        <Node id="Dashboard Del Cliente/Pqrs/PQRS.xhtml" x="389" y="120" zoom="true"/>
+        <Node id="indexHome.xhtml" x="425" y="236" zoom="true"/>
+        <Node id="Dashboard Del Admin/Correos masivos/exito.xhtml" x="1379" y="151" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Ventas/indexImagenCARTA.xhtml" x="835" y="600" zoom="false"/>
+        <Node id="Dashboard Del Admin/Correos masivos/error.xhtml" x="1382" y="342" zoom="true"/>
+        <Node id="index.xhtml" x="372" y="352" zoom="true"/>
+        <Node id="indexBlog.xhtml" x="816" y="312" zoom="true"/>
+        <Node id="Recuperar_contraseña.xhtml" x="408" y="331" zoom="true"/>
+        <Node id="Registrarse.xhtml" x="441" y="188" zoom="true"/>
+        <Node id="Dashboard Del Admin/IndexAdmin.xhtml" x="420" y="775" zoom="true"/>
+        <Node id="indexRecetas.xhtml" x="818" y="240" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Inventario/indexINVENTARIO.xhtml" x="1367" y="1171" zoom="true"/>
+        <Node id="Dashboard Del Admin/Correos masivos/Correos.xhtml" x="1373" y="224" zoom="true"/>
+        <Node id="Correos masivos/Correos.xhtml" x="1433" y="183" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Inventario/indexCRUDPROVEEDORES.xhtml" x="790" y="1171" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Inventario/indexCRUDCATEGORIAS.xhtml" x="798" y="998" zoom="true"/>
+        <Node id="about.xhtml" x="839" y="277" zoom="true"/>
+        <Node id="Dashboard Del Admin/Crud_Inventario/indexPRODUCTOS.xhtml" x="1343" y="1007" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

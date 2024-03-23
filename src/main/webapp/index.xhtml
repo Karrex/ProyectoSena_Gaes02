@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Ushuaia</title>
+        <link rel="icon" href="resources/imagenes/ushuaias.jpg" type="image/jpeg"/>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin:0;
+                padding:2;
+                font-family: sans-serif;
+                background: linear-gradient(1500deg, #000000, #FF4B25);
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .logo{
+                height: auto;
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .logo img{
+                height: 98px;
+                width: 98px;
+                margin-right: 98px;
+                border-radius:40px;
+            }
+
+            /* Estilos del header */
+            header {
+                position: relative;
+                padding: 0 2rem;
+            }
+
+            .navbar {
+                max-width: 1400px; /* Aumenta el ancho máximo para acomodar el logo y los botones */
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .navbar .link {
+                text-align: center;
+                display: flex;
+                gap: 2rem;
+                font-family: 'Carter One', cursive;
+                margin-right: 98px; /* Agrega margen derecho para el espacio */
+            }
+
+            .navbar .toggle_btn {
+                font-size: 2rem;
+                cursor: pointer;
+                display: none;
+            }
+
+            .button {
+                width: 130px;
+                font-size: 1.1rem;
+                text-decoration: none;
+                text-align: center;
+                border: none;
+                background-color: transparent;
+                align-content: center;
+                margin-right: 15px; /* Ajusta el margen derecho para el espacio */
+                color: black;
+                padding: 0 0.5rem;
+                cursor: pointer;
+                font-family: 'Carter One', cursive;
+                white-space: normal;
+            }
+
+            .button .value{
+                display: flex;
+                height: auto;
+                width: 100px;
+            }
+
+            .button:hover {
+                Color: #57624a;
+            }
+
+            /*dropdow menu*/
+            .dropdown_menu {
+                display: none;
+                position: absolute;
+                right: 2rem;
+                top: 60px;
+                height: 0;
+                width: 300px; /* Ajusta el ancho del menú desplegable */
+                background: rgb(255, 255, 255, 0.1);
+                backdrop-filter: blur(15px);
+                border-radius: 25px;
+                overflow: hidden;
+                transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .dropdown_menu.show {
+                display: block;
+                height: auto; /* Cambia la altura a auto para permitir que se ajuste automáticamente al contenido */
+            }
+
+            .dropdown_menu li {
+                padding: 0.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /*Login*/
+
+            .login-box {
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 400px;
+                padding: 40px;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, .5);
+                box-sizing: border-box;
+                box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+                border-radius: 10px;
+
+
+            }
+
+            .login-box h2 {
+                margin: 0 0 30px;
+                padding: 0;
+                color: #fff;
+                text-align: center;
+                font-size: 25px
+            }
+
+            .login-box .user-box {
+                position: relative;
+
+            }
+
+            .login-box .user-box input {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                background: transparent;
+            }
+
+            .login-box .user-box label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px 0;
+                font-size: 16px;
+                color: #fff;
+                pointer-events: none;
+                transition: .5s;
+            }
+
+            .login-box .user-box input:focus ~ label,
+            .login-box .user-box input:valid ~ label {
+                top: -30px;
+                left: 0;
+                color: #fff;
+                font-size: 17px;
+            }
+
+            .login-box a {
+                position: relative;
+                display: inline-block;
+                padding: 10px 20px;
+                color: #FF4B25;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                transition: .5s;
+                margin-top: 40px;
+                letter-spacing: 4px;
+            }
+
+            .login-box a:hover {
+                background: #FF4B25;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #FF4B25,
+                    0 0 25px #FF4B25,
+                    0 0 50px #FF4B25,
+                    0 0 100px #FF4B25;
+            }
+
+            .login-box a span {
+                position: absolute;
+                display: block;
+            }
+
+
+
+
+
+
+
+
+
+            /*mensaje*/
+
+            #messages {
+                text-align: center;
+            }
+
+            /* Estilo para aumentar el tamaño del texto */
+            #messages .ui-message {
+                font-size: 18px; /* Puedes ajustar el tamaño según tus preferencias */
+            }
+
+            /* Estilo para el mensaje de alerta */
+            #messages .ui-message-error {
+                background-color: #FF4B25; /* Color de fondo para alerta (puedes cambiarlo) */
+                color: #FF4B25; /* Color del texto para alerta (puedes cambiarlo) */
+                border: 1px solid #FF4B25; /* Borde para alerta (puedes cambiarlo) */
+                padding: 10px; /* Espaciado interno para alerta (puedes cambiarlo) */
+                margin-bottom: 15px; /* Espaciado inferior para alerta (puedes cambiarlo) */
+                border-radius: 5px; /* Bordes redondeados para alerta (puedes cambiarlo) */
+            }
+
+
+
+            .registro-pregunta {
+                color: #f8d7da; /* Reemplaza #color-deseado con el color que prefieras */
+                font-size: 18px; /* Ajusta el tamaño de la fuente según tus preferencias */
+                margin-bottom: 5px; /* Ajusta la separación inferior según tus preferencias */
+            }
+
+            .FormularioNUevo {
+                color: #f8d7da; /* Reemplaza #color-diferente con el color que prefieras */
+                text-decoration: none;
+                font-size: 6px; /* Ajusta el tamaño de la fuente según tus preferencias */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        Registrarse
+        <h:form>
+            <section class="LOGASO">
+                <div class="login-box">
+                    <h2>BIENVENIDO</h2>
+                    <p:growl id="msj"/>
+                    <div class="user-box">
+                        <h:inputText id="email" value="#{controllerLogin.usuario.email}"/>
+                        <h:outputLabel for="email" value="Correo electrónico"/>
+                    </div>
+                    <div class="user-box">
+                        <h:inputSecret id="password" value="#{controllerLogin.usuario.contraseña}" />
+                        <h:outputLabel for="password" value="Contraseña" />
+                    </div>
+
+
+                    <p:link  value="Registrarse" outcome="Registrarse" styleClass="FormularioNUevo" style=" margin-top: 0;  text-decoration: none; font-size: 11px;  font-family: 'Playpen Sans', cursive;"/>
+                    <br></br>
+                     <p:link  value="Recuperar Contraseña" outcome="Recuperar_contraseña" style= "margin-top: 0;  text-decoration: none; font-size: 11px;  font-family: 'Playpen Sans', cursive;"/>
+                    <div class="user-box">
+                        <a href="#" styleClass="button-link">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <h:commandButton value="Iniciar sesión" action="#{controllerLogin.iniciarSesion()}" style="margin-top: 0;"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <script>
+                // Limpiar mensajes después de mostrar la alerta
+                window.onload = function () {
+                    var messages = document.getElementById('messages');
+                    if (messages.children.length > 0) {
+                        alert(messages.children[0].innerText);
+                        messages.innerHTML = ''; // Limpiar mensajes
+                    }
+                };
+            </script>
+            <h:messages id="messages" globalOnly="true" style="position:relative;   background-color: #FFF;   color: #FF4B25; border: 1px solid #FFF; padding: 10px;  border-radius: 50px; text-align: center; font-size: 22px;   max-width: 600px; margin: 0 auto;  text-align: center; font-family: 'Playpen Sans', cursive;
+                        "  />
+
+        </h:form>
+
+        <br />
+        
+    </h:body>
+</html>
